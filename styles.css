@@ -1,0 +1,370 @@
+html {
+    scroll-behavior: smooth; /* Défilement fluide pour toute la page */
+}
+
+/* Couleurs */
+:root {
+    --bleu-roi: #1a237e;
+    --jaune-or: #ffd700;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: var(--bleu-roi);
+    color: var(--jaune-or);
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Icône de menu (burger) */
+.menu-btn {
+    align-self: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed; /* Rendre l'icône toujours visible */
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: var(--jaune-or);
+    margin: 5px 0;
+    display: block;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    right: -250px; /* Cachée à gauche */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--bleu-roi);
+    transition: all 1s;
+    padding-top: 60px;
+    z-index: 999; /* Sous l'icône de menu */
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+#sidebar ul li a {
+    color: var(--jaune-or);
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar.visible {
+    right: 0; /* Afficher la sidebar */
+}
+
+/* Section concerts */
+#concerts {
+    margin: 20px;
+    text-align: center;
+}
+
+#nous  {
+    margin: 20px;
+    text-align: center;
+}
+
+#nous h2 {
+    font-size: 2em; /* Taille de la police pour le titre */
+    margin-bottom: 10px; /* Espace en dessous du titre */
+}
+
+#nous p {
+    font-size: 1.5em; /* Taille de la police pour le paragraphe */
+    line-height: 1.5; /* Hauteur de ligne pour un meilleur espacement */
+}
+
+
+/* Styles du carrousel */
+/* Styles du carrousel */
+.carousel {
+    position: relative;
+    max-width: 600px; /* Largeur maximale du carrousel */
+    margin: 20px auto; /* Centrer le carrousel */
+    overflow: hidden; /* Cacher les images débordantes */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease; /* Animation lors du défilement */
+}
+
+.carousel-images img {
+    width: 100%; /* Chaque image occupe la largeur du carrousel */
+    border-radius: 8px; /* Coins arrondis pour les images */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--jaune-or);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 100; /* Au-dessus des images */
+}
+
+.prev {
+    left: 10px; /* Positionnement du bouton précédent */
+}
+
+.next {
+    right: 10px; /* Positionnement du bouton suivant */
+}
+
+
+#album-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    width: calc(100% - 40px); /* Largeur totale moins marges */
+}
+
+.album-container {
+    display: flex;
+    justify-content: space-between; /* Espacement entre les cartes */
+    flex-wrap: wrap; /* Pour s'assurer que les cartes s'ajustent en cas d'écran plus petit */
+    gap: 20px; /* Espacement entre les cartes */
+}
+
+.album-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 30%; /* Chaque carte occupe 30% de la largeur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    flex: 1;
+}
+
+.album-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.album-details {
+    text-align: left;
+}
+
+.buy-btn {
+    padding: 10px 20px;
+    background-color: #004aad; /* Bleu roi */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.buy-btn:hover {
+    background-color: #ffd700; /* Jaune or */
+}
+
+.concert-section {
+    padding: 40px; /* Espacement interne */
+    background-color: #f9f9f9; /* Couleur de fond de la section */
+    text-align: center; /* Centrer le texte */
+}
+
+.concert-card {
+    background-color: #fff; /* Couleur de fond de la carte */
+    border: 1px solid #ddd; /* Bordure de la carte */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 20px;
+    margin: 0 auto; /* Centrer la carte */
+    max-width: 600px; /* Largeur maximale de la carte */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+.concert-card h3 {
+    margin: 0 0 15px; /* Marges autour du titre */
+}
+
+.buy-btn a {
+    color: black;  /* Change la couleur du texte en noir */
+    text-decoration: none;  /* Enlève le soulignement par défaut des liens */
+}
+
+.buy-btn {
+    background-color: yellow; /* Couleur du fond du bouton */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Supprimer les bordures par défaut */
+    cursor: pointer;
+    border-radius: 5px; /* Coins arrondis */
+    font-weight: bold; /* Texte en gras */
+    display: inline-block;
+}
+
+.buy-btn:hover a {
+    color: darkgray; /* Change la couleur en survol si tu veux un effet */
+}
+
+
+#booking-section {
+    padding: 20px;
+    text-align: center; /* Centrer le texte */
+}
+
+.venue-image img {
+    width: 100%; /* Prendre toute la largeur disponible */
+    max-width: 600px; /* Largeur maximale de l'image */
+    border-radius: 10px; /* Coins arrondis */
+    margin-bottom: 20px; /* Espacement en bas de l'image */
+}
+
+.reservation-section {
+    margin: 20px 0; /* Marges autour de la section de réservation */
+}
+
+.reservation-section form {
+    display: inline-block; /* Pour centrer le formulaire */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+.reservation-section label {
+    display: block; /* Chaque label sur une nouvelle ligne */
+    margin: 10px 0 5px; /* Marges pour les labels */
+}
+
+.reservation-section input {
+    width: 100%; /* Largeur complète pour les champs de texte */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 15px; /* Espacement en bas des champs */
+}
+
+.remaining-seats {
+    margin-top: 30px; /* Espacement en haut */
+    font-size: 1.5em; /* Taille de la police pour les places restantes */
+}
+
+.reservation-btn {
+    background-color: yellow; /* Couleur du fond du bouton */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Supprimer les bordures par défaut */
+    cursor: pointer;
+    border-radius: 5px; /* Coins arrondis */
+    font-weight: bold; /* Texte en gras */
+    display: inline-block;
+}
+
+.reservation-btn:hover  {
+    color:#004aad; /* Change la couleur en survol si tu veux un effet */
+}
+
+
+#contact-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    width: calc(100% - 40px); /* Largeur totale moins marges */
+}
+
+.contact-form {
+    max-width: 600px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centre le formulaire */
+    background-color: #f9f9f9; /* Couleur de fond du formulaire */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espacement entre les champs du formulaire */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+label {
+    display: block; /* Affiche le label sur une nouvelle ligne */
+    margin-bottom: 5px; /* Espacement entre le label et le champ */
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 100%; /* Champs de formulaire prennent toute la largeur */
+    padding: 10px; /* Espacement interne pour les champs */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+textarea {
+    resize: vertical; /* Permet de redimensionner le textarea uniquement verticalement */
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #004aad; /* Bleu roi */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ffd700; /* Jaune or */
+}
+
+
+
+
+.concert-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.buy-btn {
+    background-color: var(--bleu-roi);
+    color: var(--jaune-or);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--bleu-roi);
+    color: var(--jaune-or);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

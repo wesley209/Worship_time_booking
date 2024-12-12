@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation de Ticket</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous que le chemin vers le fichier CSS est correct -->
+</head>
+<body>
+    <section id="booking-section">
+        <h2>Réservation de Ticket pour le Concert Spécial</h2>
+
+        <div class="venue-image">
+
+        </div>
+
+        <div class="reservation-section">
+            <h3>Réservez votre ticket</h3>
+            <form id="reservation-form">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="quantity">Nombre de tickets:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <button class="reservation-btn" type="submit">Réserver</button>
+            </form>
+        </div>
+
+        <div class="remaining-seats">
+
+        </div>
+    </section>
+</body>
+</html>

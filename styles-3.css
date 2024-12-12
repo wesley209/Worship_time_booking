@@ -1,0 +1,88 @@
+#register-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    width: calc(100% - 40px); /* Largeur totale moins marges */
+}
+
+.register-form {
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centre le formulaire */
+    background-color: #f9f9f9; /* Couleur de fond du formulaire */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espacement entre les champs du formulaire */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+label {
+    display: block; /* Affiche le label sur une nouvelle ligne */
+    margin-bottom: 5px; /* Espacement entre le label et le champ */
+}
+
+input[type="text"],
+input[type="password"]
+
+{
+    width: 90%; /* Champs de formulaire prennent toute la largeur */
+    padding: 10px; /* Espacement interne pour les champs */
+    border: 2px solid #ccc; /* Bordure légère */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #004aad; /* Bleu roi */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ffd700; /* Jaune or */
+}
+
+/* styles-2.css */
+
+body {
+    background-image: url('assemblee.jpg'); /* Remplace 'background.jpg' par le nom de ton fichier image */
+    background-size: cover; /* Pour que l'image couvre toute la page */
+    background-position: center; /* Pour centrer l'image */
+    background-repeat: no-repeat; /* Pour ne pas répéter l'image */
+    height: 100vh; /* Pour que le corps prenne toute la hauteur de la fenêtre */
+    margin: 0; /* Pour enlever la marge par défaut du body */
+    display: flex; /* Pour utiliser le modèle flex */
+    justify-content: center; /* Centrer le contenu horizontalement */
+    align-items: center; /* Centrer le contenu verticalement */
+}
+
+#login-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc avec opacité pour lisibilité */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    width: 300px; /* Largeur fixe pour le formulaire */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espacement entre les champs */
+}
+
+.submit-btn {
+    background-color: #007bff; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 15px; /* Espacement interne */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Couleur du bouton au survol */
+}
